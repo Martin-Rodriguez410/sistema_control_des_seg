@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio:index' %}">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <p>Bienvenido a la página principal</p>
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; Sistema de Control de Seguridad 2026</p>
+    </footer>
+</body>
+</html>
